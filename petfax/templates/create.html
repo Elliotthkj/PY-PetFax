@@ -1,0 +1,27 @@
+<!-- petfax/templates/create.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Fun Fact</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Create a Fun Fact</h1>
+
+    <form action="{{ url_for('facts.create_fact') }}" method="GET">
+      <label for="submitter">Submitter:</label>
+      <input type="text" id="submitter" name="submitter" required /><br />
+
+      <label for="fact">Fun Fact:</label>
+      <textarea id="fact" name="fact" rows="4" cols="50" required></textarea
+      ><br />
+
+      <input type="submit" value="Submit Fact" />
+    </form>
+  </body>
+</html>
